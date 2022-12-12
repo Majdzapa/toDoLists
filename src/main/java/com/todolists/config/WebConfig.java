@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 // we'll add the SpringSecurity
+	// we'll add the SpringSecurity
 	@Override
 	public void addCorsMappings(CorsRegistry corsRegistry) {
 		corsRegistry.addMapping("/**").allowedMethods("*");
