@@ -5,16 +5,17 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
-@Configuration
+//@Configuration
 public class WebConfig implements WebMvcConfigurer {
-// we'll add the SpringSecurity
-	@Override
-	public void addCorsMappings(CorsRegistry corsRegistry) {
-		corsRegistry.addMapping("/**").allowedMethods("*");
-		corsRegistry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST",
-				"PUT", "DELETE");
-
-	}
+//// we'll add the SpringSecurity
+//	// we'll add the SpringSecurity
+//	@Override
+//	public void addCorsMappings(CorsRegistry corsRegistry) {
+//		corsRegistry.addMapping("/**").allowedMethods("*");
+//		corsRegistry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST",
+//				"PUT", "DELETE");
+//
+//	}
 
 
 }
