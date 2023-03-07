@@ -1,0 +1,26 @@
+steps to use local docker images with Minikube:
+- open git cmd 
+- minikube docker-env
+- eval $(minikube docker-env)
+- docker build -t my-image c://--path--
+- kubectl apply -f deployment.yaml ==>should contain my-image
+
+---------------------------------
+
+//Restart deployed pods-deployment : get namespace =Kubectl get namespaces =>default
+kubectl -n {NAMESPACE} rollout restart deploy
+
+//this cmd used to get the URL :Getting the NodePort using the service command
+minikube service <service-name> --url
+minikube service springboot-crud-svc --url
+
+---------------------------------
+// pull sql from docker-hub
+-minikube ssh docker pull mysql:5.7
+- kubectl apply -f db-deployment.yaml
+
+//Access the MySQL Database inside the cluster
+kubectl exec -it <pod_name> bash
+
+//Then use the command below to connect to the MySQL server
+mysql -h mysql -u root -p 
